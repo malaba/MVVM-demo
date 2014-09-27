@@ -10,6 +10,4 @@
 
 @interface Parent_VM ()
 
-@property (strong, nonatomic) TKStateMachine *statemachine;
-
 @end
