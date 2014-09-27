@@ -14,4 +14,6 @@
 
 @property (strong, nonatomic) Parent_VM *viewmodel;
 
+@property (weak, nonatomic) IBOutlet UIView *loginIndicator;
+
 @end

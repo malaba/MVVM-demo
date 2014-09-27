@@ -19,8 +19,20 @@
     
     self.viewmodel = [Parent_VM new];
     
-
-
+    Parent_VC __weak *wself = self;
+    
+    [self.viewmodel.unloggedState setDidEnterStateBlock:^(TKState *state, TKTransition *transition) {
+        wself.loginIndicator.backgroundColor = [UIColor redColor];
+        
+    }];
+    
+    [self.viewmodel.unloggedState setDidExitStateBlock:^(TKState *state, TKTransition *transition) {
+        
+    }];
+    
+    [self.viewmodel.loggedState setDidEnterStateBlock:^(TKState *state, TKTransition *transition) {
+        wself.loginIndicator.backgroundColor = [UIColor greenColor];
+    }];
     
     
 }

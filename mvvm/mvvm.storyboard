@@ -16,8 +16,37 @@
                     <view key="view" contentMode="scaleToFill" id="ZZN-hK-0sz" customClass="Parent_V">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MVVM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKi-pF-QE7">
+                                <rect key="frame" x="60" y="20" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="2Lv-8y-OCk"/>
+                                    <constraint firstAttribute="height" constant="21" id="dCp-za-o3c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rNS-xB-JgI" userLabel="Login Indicator">
+                                <rect key="frame" x="80" y="142" width="160" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="5mH-yC-GOD"/>
+                                    <constraint firstAttribute="height" constant="100" id="oDQ-8d-gXp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fKi-pF-QE7" firstAttribute="centerX" secondItem="ZZN-hK-0sz" secondAttribute="centerX" id="RPc-0j-WS8"/>
+                            <constraint firstItem="rNS-xB-JgI" firstAttribute="top" secondItem="fKi-pF-QE7" secondAttribute="bottom" constant="100" id="dnj-tE-4EK"/>
+                            <constraint firstAttribute="centerX" secondItem="rNS-xB-JgI" secondAttribute="centerX" id="lBV-7h-B58"/>
+                            <constraint firstItem="fKi-pF-QE7" firstAttribute="top" secondItem="FRY-gC-4BU" secondAttribute="bottom" id="y7x-MK-UJp"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginIndicator" destination="rNS-xB-JgI" id="YEP-aW-TqK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HNi-ny-KQ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
