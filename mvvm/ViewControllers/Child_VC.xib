@@ -6,19 +6,32 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Child_VC">
             <connections>
-                <outlet property="wholeView" destination="iN0-l3-epB" id="QRt-Xq-gio"/>
+                <outlet property="view" destination="iN0-l3-epB" id="vCq-Mh-caM"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view alpha="0.0" contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pah-Kx-djZ">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pah-Kx-djZ">
                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="44Y-FT-HJM"/>
+                        <constraint firstAttribute="width" constant="200" id="QNi-XP-9EG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="flip me!">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="disabled" title="flip me!"/>
+                    <state key="selected" title="flip me!">
+                        <color key="titleColor" white="0.22" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" title="flip me!">
+                        <color key="titleColor" white="0.22" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="flip:" destination="-1" eventType="touchUpInside" id="rXq-eI-ohs"/>
@@ -26,6 +39,10 @@
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="0.045525733290000002" blue="0.032308422480000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="pah-Kx-djZ" secondAttribute="centerY" id="8cT-o5-Uhu"/>
+                <constraint firstAttribute="centerX" secondItem="pah-Kx-djZ" secondAttribute="centerX" id="uAm-lj-FkY"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>

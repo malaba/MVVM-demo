@@ -28,11 +28,11 @@
     Child_VC __weak *wself = self;
     
     [self.viewmodel.offState setDidEnterStateBlock:^(TKState *state, TKTransition *transition) {
-        wself.wholeView.backgroundColor = [UIColor redColor];
+        wself.view.backgroundColor = [UIColor redColor];
     }];
     
     [self.viewmodel.onState setDidEnterStateBlock:^(TKState *state, TKTransition *transition) {
-        wself.wholeView.backgroundColor = [UIColor greenColor];
+        wself.view.backgroundColor = [UIColor greenColor];
     }];
 }
 

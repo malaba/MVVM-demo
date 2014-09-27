@@ -14,8 +14,6 @@
 
 @property (strong, nonatomic) Child_VM *viewmodel;
 
-@property (strong, nonatomic) IBOutlet UIView *wholeView;
-
 - (IBAction)flip:(id)sender;
 
 @end
