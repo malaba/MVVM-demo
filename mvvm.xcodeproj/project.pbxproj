@@ -24,6 +24,7 @@
 		50B5038E19D6F4EE00363310 /* Parent_VM.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B5038D19D6F4EE00363310 /* Parent_VM.m */; };
 		50CA35F419D710CE00E1D50B /* Child_VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CA35F319D710CE00E1D50B /* Child_VC.m */; };
 		50F5C11819D7124C0025A37F /* Child_VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50F5C11719D7124C0025A37F /* Child_VC.xib */; };
+		50F5C11C19D7134F0025A37F /* Child_VM.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F5C11A19D7134F0025A37F /* Child_VM.m */; };
 		FBFC035849004314B93CEE62 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E57D317D37404E629A09196B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,9 @@
 		50CA35F319D710CE00E1D50B /* Child_VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Child_VC.m; path = ViewControllers/Child_VC.m; sourceTree = "<group>"; };
 		50CA35F519D710E400E1D50B /* Child_VC+pivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Child_VC+pivate.h"; path = "ViewControllers/Child_VC+pivate.h"; sourceTree = "<group>"; };
 		50F5C11719D7124C0025A37F /* Child_VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Child_VC.xib; path = ViewControllers/Child_VC.xib; sourceTree = "<group>"; };
+		50F5C11919D7134F0025A37F /* Child_VM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Child_VM.h; path = ViewModels/Child_VM.h; sourceTree = "<group>"; };
+		50F5C11A19D7134F0025A37F /* Child_VM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Child_VM.m; path = ViewModels/Child_VM.m; sourceTree = "<group>"; };
+		50F5C11B19D7134F0025A37F /* Child_VM+private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Child_VM+private.h"; path = "ViewModels/Child_VM+private.h"; sourceTree = "<group>"; };
 		BC83C4B8B9A0455DADCAA126 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		E57D317D37404E629A09196B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -210,6 +214,9 @@
 		50B5038B19D6F4B500363310 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				50F5C11919D7134F0025A37F /* Child_VM.h */,
+				50F5C11A19D7134F0025A37F /* Child_VM.m */,
+				50F5C11B19D7134F0025A37F /* Child_VM+private.h */,
 				50B5038C19D6F4EE00363310 /* Parent_VM.h */,
 				50B5038F19D6F4FF00363310 /* Parent_VM+private.h */,
 				50B5038D19D6F4EE00363310 /* Parent_VM.m */,
@@ -352,6 +359,7 @@
 				5058F53219D6E90400819C7C /* main.m in Sources */,
 				5058F53619D6E90400819C7C /* AppDelegate.m in Sources */,
 				50B5038E19D6F4EE00363310 /* Parent_VM.m in Sources */,
+				50F5C11C19D7134F0025A37F /* Child_VM.m in Sources */,
 				50B5034919D6EF0D00363310 /* Parent_VC.m in Sources */,
 				50CA35F419D710CE00E1D50B /* Child_VC.m in Sources */,
 			);
