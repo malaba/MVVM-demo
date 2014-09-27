@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+#import <TransitionKit.h>
+
+
 @interface Parent_VM : NSObject
+
+@property (strong, nonatomic) TKState *unlogged;
+@property (strong, nonatomic) TKState *logged;
 
 @end
