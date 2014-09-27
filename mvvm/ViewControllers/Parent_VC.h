@@ -11,5 +11,6 @@
 @interface Parent_VC : UIViewController
 
 - (IBAction)logMe:(id)sender;
+- (IBAction)logout:(id)sender;
 
 @end

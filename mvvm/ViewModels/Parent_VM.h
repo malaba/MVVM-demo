@@ -19,5 +19,6 @@
 @property (strong, nonatomic) TKState *loggedState;
 
 @property (strong, nonatomic) TKEvent *loginTransition;
+@property (strong, nonatomic) TKEvent *logoutTransition;
 
 @end

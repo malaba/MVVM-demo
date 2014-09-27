@@ -24,10 +24,15 @@
     [self.viewmodel.unloggedState setDidEnterStateBlock:^(TKState *state, TKTransition *transition) {
         wself.loginIndicator.backgroundColor = [UIColor redColor];
         
+        wself.logmeButton.enabled = YES;
+        wself.logoutButton.enabled = NO;
     }];
     
     [self.viewmodel.loggedState setDidEnterStateBlock:^(TKState *state, TKTransition *transition) {
         wself.loginIndicator.backgroundColor = [UIColor greenColor];
+        
+        wself.logmeButton.enabled = NO;
+        wself.logoutButton.enabled = YES;
     }];
     
     
@@ -35,6 +40,10 @@
 
 - (IBAction)logMe:(id)sender {
     [self.viewmodel.statemachine fireEvent:self.viewmodel.loginTransition userInfo:nil error:nil];
+}
+
+- (IBAction)logout:(id)sender {
+    [self.viewmodel.statemachine fireEvent:self.viewmodel.logoutTransition userInfo:nil error:nil];
 }
 
 @end

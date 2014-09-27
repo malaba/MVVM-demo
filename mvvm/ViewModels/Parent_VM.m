@@ -22,15 +22,19 @@
 
 - (void)setup {
     self.statemachine = [TKStateMachine new];
-    
+
+  // States
     self.unloggedState = [TKState stateWithName:@"unlogged"];
     self.loggedState = [TKState stateWithName:@"logged"];
-    
     [self.statemachine addStates:@[self.unloggedState, self.loggedState]];
-    self.statemachine.initialState = self.unloggedState;
     
-    self.loginTransition = [TKEvent eventWithName:@"loginTransition" transitioningFromStates:@[ self.unloggedState ] toState:self.loggedState];
-    [self.statemachine addEvent:self.loginTransition];
+    self.statemachine.initialState = self.unloggedState;
+
+    
+  // Transitions
+    self.loginTransition = [TKEvent eventWithName:@"loginTransition" transitioningFromStates:@[self.unloggedState] toState:self.loggedState];
+    self.logoutTransition = [TKEvent eventWithName:@"logoutTransition" transitioningFromStates:@[self.loggedState] toState:self.unloggedState];
+    [self.statemachine addEvents:@[self.loginTransition, self.logoutTransition]];
 
     [self.statemachine activate];
 }
