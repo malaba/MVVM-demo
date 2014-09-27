@@ -13,7 +13,7 @@
 
 @interface Parent_VM : NSObject
 
-@property (strong, nonatomic) TKState *unlogged;
-@property (strong, nonatomic) TKState *logged;
+@property (strong, nonatomic) TKState *unloggedState;
+@property (strong, nonatomic) TKState *loggedState;
 
 @end
