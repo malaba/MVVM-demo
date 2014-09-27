@@ -14,9 +14,15 @@
 
 @implementation Parent_VC
 
+#pragma mark - View Lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setupStatemachine];
+}
+
+#pragma mark - Statemachine
+- (void)setupStatemachine {
     self.viewmodel = [Parent_VM new];
     
     Parent_VC __weak *wself = self;
@@ -34,10 +40,9 @@
         wself.logmeButton.enabled = NO;
         wself.logoutButton.enabled = YES;
     }];
-    
-    
 }
 
+#pragma mark - Actions
 - (IBAction)logMe:(id)sender {
     [self.viewmodel.statemachine fireEvent:self.viewmodel.loginTransition userInfo:nil error:nil];
 }
