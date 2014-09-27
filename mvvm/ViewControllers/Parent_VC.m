@@ -21,7 +21,11 @@
     
     [self setupStatemachine];
     
-    self.child = [Child_VC new];
+    self.childA = [Child_VC new];
+    self.childA.view.frame = CGRectMake(20, 200, 100, 100);
+    
+    self.childB = [Child_VC new];
+    self.childB.view.frame = CGRectMake(150, 200, 100, 100);
 }
 
 #pragma mark - Statemachine
@@ -39,7 +43,8 @@
         wself.logmeButton.enabled = YES;
         wself.logoutButton.enabled = NO;
         
-        [wself removeChild];
+        [wself removeChildVC:wself.childA];
+        [wself removeChildVC:wself.childB];
     }];
     
     [self.viewmodel.loggedState setDidEnterStateBlock:^(TKState *state, TKTransition *transition) {
@@ -51,31 +56,35 @@
         wself.logmeButton.enabled = NO;
         wself.logoutButton.enabled = YES;
         
-        [wself addChild];
+        [wself addChildVC:wself.childA];
+        [wself addChildVC:wself.childB];
     }];
 }
 
 #pragma mark - Utils
-- (void)addChild {
-    [self addChildViewController:self.child];
-    self.child.view.frame = CGRectMake(20, 200, 100, 100);
-    [self.view addSubview:self.child.view];
-    [self.child didMoveToParentViewController:self];
+- (void)addChildVC:(UIViewController *)vc {
+    vc.view.userInteractionEnabled = YES;
+    
+    [self addChildViewController:vc];
+    [self.view addSubview:vc.view];
+    [vc didMoveToParentViewController:self];
     
     [UIView animateWithDuration:1.0 animations:^{
-        self.child.view.alpha = 1.0f;
+        vc.view.alpha = 1.0f;
     }];
 }
 
-- (void)removeChild {
+- (void)removeChildVC:(UIViewController *)vc {
+    vc.view.userInteractionEnabled = NO;
+    
     [UIView animateWithDuration:1.0
                      animations:^{
-                         self.child.view.alpha = 0.0f;
+                         vc.view.alpha = 0.0f;
                      }
                      completion:^(BOOL finished) {
-                         [self.child willMoveToParentViewController:nil];
-                         [self.child.view removeFromSuperview];
-                         [self.child removeFromParentViewController];
+                         [vc willMoveToParentViewController:nil];
+                         [vc.view removeFromSuperview];
+                         [vc removeFromParentViewController];
                      }];
 }
 

@@ -13,7 +13,9 @@
 @interface Parent_VC ()
 
 @property (strong, nonatomic) Parent_VM *viewmodel;
-@property (strong, nonatomic) Child_VC *child;
+
+@property (strong, nonatomic) Child_VC *childA;
+@property (strong, nonatomic) Child_VC *childB;
 
 @property (weak, nonatomic) IBOutlet UIView *loginIndicator;
 @property (weak, nonatomic) IBOutlet UIButton *logmeButton;
