@@ -21,6 +21,7 @@
 		5058F54B19D6E90400819C7C /* mvvmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5058F54A19D6E90400819C7C /* mvvmTests.m */; };
 		50B5034619D6ED4000363310 /* mvvm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50B5034519D6ED4000363310 /* mvvm.storyboard */; };
 		50B5034919D6EF0D00363310 /* Parent_VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B5034819D6EF0D00363310 /* Parent_VC.m */; };
+		50B5038819D6F3D300363310 /* Parent_V.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B5038719D6F3D300363310 /* Parent_V.m */; };
 		FBFC035849004314B93CEE62 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E57D317D37404E629A09196B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,9 @@
 		50B5034719D6EF0D00363310 /* Parent_VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Parent_VC.h; path = ViewControllers/Parent_VC.h; sourceTree = "<group>"; };
 		50B5034819D6EF0D00363310 /* Parent_VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Parent_VC.m; path = ViewControllers/Parent_VC.m; sourceTree = "<group>"; };
 		50B5034E19D6EF9900363310 /* Parent_VC+private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Parent_VC+private.h"; path = "ViewControllers/Parent_VC+private.h"; sourceTree = "<group>"; };
+		50B5038619D6F3D300363310 /* Parent_V.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Parent_V.h; path = Views/Parent_V.h; sourceTree = "<group>"; };
+		50B5038719D6F3D300363310 /* Parent_V.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Parent_V.m; path = Views/Parent_V.m; sourceTree = "<group>"; };
+		50B5038919D6F3FA00363310 /* Parent_V+private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Parent_V+private.h"; path = "Views/Parent_V+private.h"; sourceTree = "<group>"; };
 		BC83C4B8B9A0455DADCAA126 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		E57D317D37404E629A09196B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -164,6 +168,9 @@
 		50B5034A19D6EF1500363310 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				50B5038619D6F3D300363310 /* Parent_V.h */,
+				50B5038919D6F3FA00363310 /* Parent_V+private.h */,
+				50B5038719D6F3D300363310 /* Parent_V.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -323,9 +330,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50B5034919D6EF0D00363310 /* Parent_VC.m in Sources */,
-				5058F53619D6E90400819C7C /* AppDelegate.m in Sources */,
 				5058F53219D6E90400819C7C /* main.m in Sources */,
+				5058F53619D6E90400819C7C /* AppDelegate.m in Sources */,
+				50B5038819D6F3D300363310 /* Parent_V.m in Sources */,
+				50B5034919D6EF0D00363310 /* Parent_VC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
