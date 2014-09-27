@@ -9,6 +9,7 @@
 #import "Parent_VC.h"
 #import "Parent_VC+private.h"
 
+#import "Child_VC.h"
 #import "Parent_VM.h"
 
 
@@ -19,6 +20,8 @@
     [super viewDidLoad];
     
     [self setupStatemachine];
+    
+    self.child = [Child_VC new];
 }
 
 #pragma mark - Statemachine
@@ -28,18 +31,52 @@
     Parent_VC __weak *wself = self;
     
     [self.viewmodel.unloggedState setDidEnterStateBlock:^(TKState *state, TKTransition *transition) {
-        wself.loginIndicator.backgroundColor = [UIColor redColor];
+        [UIView animateWithDuration:0.2f
+                         animations:^{
+                             wself.loginIndicator.backgroundColor = [UIColor redColor];
+                         }];
         
         wself.logmeButton.enabled = YES;
         wself.logoutButton.enabled = NO;
+        
+        [wself removeChild];
     }];
     
     [self.viewmodel.loggedState setDidEnterStateBlock:^(TKState *state, TKTransition *transition) {
-        wself.loginIndicator.backgroundColor = [UIColor greenColor];
-        
+        [UIView animateWithDuration:0.2f
+                         animations:^{
+                             wself.loginIndicator.backgroundColor = [UIColor greenColor];
+                         }];
+
         wself.logmeButton.enabled = NO;
         wself.logoutButton.enabled = YES;
+        
+        [wself addChild];
     }];
+}
+
+#pragma mark - Utils
+- (void)addChild {
+    [self addChildViewController:self.child];
+    self.child.view.frame = CGRectMake(20, 200, 100, 100);
+    [self.view addSubview:self.child.view];
+    [self.child didMoveToParentViewController:self];
+    
+    [UIView animateWithDuration:1.0 animations:^{
+        self.child.view.alpha = 1.0f;
+    }];
+}
+
+- (void)removeChild {
+    [UIView animateWithDuration:1.0
+                     animations:^{
+                         self.child.view.alpha = 0.0f;
+                     }
+                     completion:^(BOOL finished) {
+                         [self.child willMoveToParentViewController:nil];
+                         [self.child.view removeFromSuperview];
+                         [self.child removeFromParentViewController];
+                     }];
 }
 
 #pragma mark - Actions

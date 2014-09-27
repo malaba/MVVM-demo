@@ -8,11 +8,12 @@
 
 #import "Parent_VC.h"
 
-@class Parent_VM;
+@class Child_VC, Parent_VM;
 
 @interface Parent_VC ()
 
 @property (strong, nonatomic) Parent_VM *viewmodel;
+@property (strong, nonatomic) Child_VC *child;
 
 @property (weak, nonatomic) IBOutlet UIView *loginIndicator;
 @property (weak, nonatomic) IBOutlet UIButton *logmeButton;
