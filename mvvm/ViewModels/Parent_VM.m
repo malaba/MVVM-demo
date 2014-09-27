@@ -29,8 +29,8 @@
     [self.statemachine addStates:@[self.unloggedState, self.loggedState]];
     self.statemachine.initialState = self.unloggedState;
     
-    TKEvent *loginTransition = [TKEvent eventWithName:@"loginTransition" transitioningFromStates:@[ self.unloggedState ] toState:self.loggedState];
-    [self.statemachine addEvent:loginTransition];
+    self.loginTransition = [TKEvent eventWithName:@"loginTransition" transitioningFromStates:@[ self.unloggedState ] toState:self.loggedState];
+    [self.statemachine addEvent:self.loginTransition];
 
     [self.statemachine activate];
 }
