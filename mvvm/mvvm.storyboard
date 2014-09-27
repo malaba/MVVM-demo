@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="djB-W9-VQh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="djB-W9-VQh">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--ParentVC-->
@@ -27,12 +27,12 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rNS-xB-JgI" userLabel="Login Indicator">
-                                <rect key="frame" x="80" y="142" width="160" height="100"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rNS-xB-JgI" userLabel="Login Indicator">
+                                <rect key="frame" x="0.0" y="46" width="320" height="21"/>
                                 <color key="backgroundColor" red="1" green="0.045525733290000002" blue="0.032308422480000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="5mH-yC-GOD"/>
-                                    <constraint firstAttribute="height" constant="100" id="oDQ-8d-gXp"/>
+                                    <constraint firstAttribute="width" constant="320" id="ab6-pi-IpL"/>
+                                    <constraint firstAttribute="height" constant="21" id="bgL-QI-Y5P"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HI4-e1-6Th">
@@ -58,7 +58,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fKi-pF-QE7" firstAttribute="centerX" secondItem="ZZN-hK-0sz" secondAttribute="centerX" id="RPc-0j-WS8"/>
-                            <constraint firstItem="rNS-xB-JgI" firstAttribute="top" secondItem="fKi-pF-QE7" secondAttribute="bottom" constant="100" id="dnj-tE-4EK"/>
+                            <constraint firstItem="rNS-xB-JgI" firstAttribute="top" secondItem="fKi-pF-QE7" secondAttribute="bottom" constant="5" id="dnj-tE-4EK"/>
                             <constraint firstAttribute="centerX" secondItem="rNS-xB-JgI" secondAttribute="centerX" id="lBV-7h-B58"/>
                             <constraint firstItem="fKi-pF-QE7" firstAttribute="top" secondItem="FRY-gC-4BU" secondAttribute="bottom" id="y7x-MK-UJp"/>
                         </constraints>
