@@ -1,0 +1,10 @@
+.DS_Store
+*.swp
+
+Pods/
+.idea/
+xcuserdata
+
+build/
+DerivedData/
+appledoc/
