@@ -28,15 +28,22 @@
     Child_VC __weak *wself = self;
     
     [self.viewmodel.offState setDidEnterStateBlock:^(TKState *state, TKTransition *transition) {
-
+        wself.wholeView.backgroundColor = [UIColor redColor];
     }];
     
     [self.viewmodel.onState setDidEnterStateBlock:^(TKState *state, TKTransition *transition) {
-
+        wself.wholeView.backgroundColor = [UIColor greenColor];
     }];
 }
 
 #pragma mark - Actions
-
+- (IBAction)flip:(id)sender {
+    if (self.viewmodel.statemachine.currentState == self.viewmodel.offState) {
+        [self.viewmodel.statemachine fireEvent:self.viewmodel.powerOnTransition userInfo:nil error:nil];
+    }
+    else {
+        [self.viewmodel.statemachine fireEvent:self.viewmodel.powerOffTransition userInfo:nil error:nil];
+    }
+}
 
 @end
