@@ -8,6 +8,10 @@
 
 #import "Child_VC.h"
 
+@class Child_VM;
+
 @interface Child_VC ()
+
+@property (strong, nonatomic) Child_VM *viewmodel;
 
 @end
