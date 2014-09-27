@@ -1,0 +1,30 @@
+PODS:
+  - BlocksKit (2.2.5):
+    - BlocksKit/All
+  - BlocksKit/All (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+    - BlocksKit/MessageUI
+    - BlocksKit/UIKit
+  - BlocksKit/Core (2.2.5)
+  - BlocksKit/DynamicDelegate (2.2.5)
+  - BlocksKit/MessageUI (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - BlocksKit/UIKit (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - Reveal-iOS-SDK (1.0.5)
+  - TransitionKit (2.1.0)
+
+DEPENDENCIES:
+  - BlocksKit
+  - Reveal-iOS-SDK
+  - TransitionKit
+
+SPEC CHECKSUMS:
+  BlocksKit: 4439e7f30a9f90743462ca63545a15c1f4304cef
+  Reveal-iOS-SDK: d4b2f4c20d5b823b7f8b88250fe1b71cecd424a7
+  TransitionKit: 6a6f3ddda38ae758778aa889dcb930e4f8d64edc
+
+COCOAPODS: 0.33.1
