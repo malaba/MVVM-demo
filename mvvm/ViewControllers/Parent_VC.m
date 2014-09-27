@@ -26,15 +26,15 @@
         
     }];
     
-    [self.viewmodel.unloggedState setDidExitStateBlock:^(TKState *state, TKTransition *transition) {
-        
-    }];
-    
     [self.viewmodel.loggedState setDidEnterStateBlock:^(TKState *state, TKTransition *transition) {
         wself.loginIndicator.backgroundColor = [UIColor greenColor];
     }];
     
     
+}
+
+- (IBAction)logMe:(id)sender {
+    [self.viewmodel.statemachine fireEvent:self.viewmodel.loginTransition userInfo:nil error:nil];
 }
 
 @end

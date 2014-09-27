@@ -10,4 +10,6 @@
 
 @interface Parent_VC : UIViewController
 
+- (IBAction)logMe:(id)sender;
+
 @end

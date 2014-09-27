@@ -29,12 +29,21 @@
                             </label>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rNS-xB-JgI" userLabel="Login Indicator">
                                 <rect key="frame" x="80" y="142" width="160" height="100"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.045525733290000002" blue="0.032308422480000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="5mH-yC-GOD"/>
                                     <constraint firstAttribute="height" constant="100" id="oDQ-8d-gXp"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HI4-e1-6Th">
+                                <rect key="frame" x="16" y="518" width="100" height="30"/>
+                                <state key="normal" title="LogMe!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logMe:" destination="djB-W9-VQh" eventType="touchUpInside" id="ep1-0O-uqb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
