@@ -9,15 +9,20 @@
 #import "Parent_VC.h"
 #import "Parent_VC+private.h"
 
+#import "Parent_VM.h"
+
 
 @implementation Parent_VC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.viewmodel = [Parent_VM new];
+    
+
+
+    
     
 }
-
-
 
 @end

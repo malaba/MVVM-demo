@@ -8,6 +8,10 @@
 
 #import "Parent_VC.h"
 
+@class Parent_VM;
+
 @interface Parent_VC ()
+
+@property (strong, nonatomic) Parent_VM *viewmodel;
 
 @end
