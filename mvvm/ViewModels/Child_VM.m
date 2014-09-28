@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 PMU. All rights reserved.
 //
 
-#import "Child_VM.h"
 #import "Child_VM+private.h"
 
 

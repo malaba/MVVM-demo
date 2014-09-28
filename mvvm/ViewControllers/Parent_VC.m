@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 PMU. All rights reserved.
 //
 
-#import "Parent_VC.h"
 #import "Parent_VC+private.h"
 
 #import "Child_VC.h"
@@ -19,13 +18,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setupStatemachine];
-    
     self.childA = [Child_VC new];
     self.childA.view.frame = CGRectMake(20, 200, 100, 100);
     
     self.childB = [Child_VC new];
     self.childB.view.frame = CGRectMake(150, 200, 100, 100);
+    
+    [self setupStatemachine];
 }
 
 #pragma mark - Statemachine

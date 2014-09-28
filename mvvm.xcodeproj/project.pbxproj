@@ -215,8 +215,8 @@
 			isa = PBXGroup;
 			children = (
 				50F5C11919D7134F0025A37F /* Child_VM.h */,
-				50F5C11A19D7134F0025A37F /* Child_VM.m */,
 				50F5C11B19D7134F0025A37F /* Child_VM+private.h */,
+				50F5C11A19D7134F0025A37F /* Child_VM.m */,
 				50B5038C19D6F4EE00363310 /* Parent_VM.h */,
 				50B5038F19D6F4FF00363310 /* Parent_VM+private.h */,
 				50B5038D19D6F4EE00363310 /* Parent_VM.m */,
