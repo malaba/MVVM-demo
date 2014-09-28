@@ -33,30 +33,32 @@
     
     Parent_VC __weak *wself = self;
     
-    [self.viewmodel.unloggedState setDidEnterStateBlock:^(TKState *state, TKTransition *transition) {
-        [UIView animateWithDuration:0.2f
-                         animations:^{
-                             wself.loginIndicator.backgroundColor = [UIColor redColor];
-                         }];
+    [self.viewmodel setupStateMachine:^(TKStateMachine *statemachine) {
+        [self.viewmodel.unloggedState setDidEnterStateBlock:^(TKState *state, TKTransition *transition) {
+            [UIView animateWithDuration:0.2f
+                             animations:^{
+                                 wself.loginIndicator.backgroundColor = [UIColor redColor];
+                             }];
+            
+            wself.logmeButton.enabled = YES;
+            wself.logoutButton.enabled = NO;
+            
+            [wself removeChildVC:wself.childA];
+            [wself removeChildVC:wself.childB];
+        }];
         
-        wself.logmeButton.enabled = YES;
-        wself.logoutButton.enabled = NO;
-        
-        [wself removeChildVC:wself.childA];
-        [wself removeChildVC:wself.childB];
-    }];
-    
-    [self.viewmodel.loggedState setDidEnterStateBlock:^(TKState *state, TKTransition *transition) {
-        [UIView animateWithDuration:0.2f
-                         animations:^{
-                             wself.loginIndicator.backgroundColor = [UIColor greenColor];
-                         }];
-
-        wself.logmeButton.enabled = NO;
-        wself.logoutButton.enabled = YES;
-        
-        [wself addChildVC:wself.childA];
-        [wself addChildVC:wself.childB];
+        [self.viewmodel.loggedState setDidEnterStateBlock:^(TKState *state, TKTransition *transition) {
+            [UIView animateWithDuration:0.2f
+                             animations:^{
+                                 wself.loginIndicator.backgroundColor = [UIColor greenColor];
+                             }];
+            
+            wself.logmeButton.enabled = NO;
+            wself.logoutButton.enabled = YES;
+            
+            [wself addChildVC:wself.childA];
+            [wself addChildVC:wself.childB];
+        }];
     }];
 }
 

@@ -21,4 +21,6 @@
 @property (strong, nonatomic) TKEvent *powerOnTransition;
 @property (strong, nonatomic) TKEvent *powerOffTransition;
 
+- (void)setupStateMachine:(void (^)(TKStateMachine *statemachine))block;
+
 @end

@@ -21,4 +21,6 @@
 @property (strong, nonatomic) TKEvent *loginTransition;
 @property (strong, nonatomic) TKEvent *logoutTransition;
 
+- (void)setupStateMachine:(void (^)(TKStateMachine *statemachine))block;
+
 @end

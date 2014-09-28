@@ -11,30 +11,24 @@
 
 @implementation Parent_VM
 
-- (instancetype)init {
-    if (self = [super init]) {
-        [self setup];
-    }
-    
-    return self;
-}
-
-- (void)setup {
+- (void)setupStateMachine:(void (^)(TKStateMachine *))block {
     self.statemachine = [TKStateMachine new];
 
   // States
     self.unloggedState = [TKState stateWithName:@"unlogged"];
     self.loggedState = [TKState stateWithName:@"logged"];
     [self.statemachine addStates:@[self.unloggedState, self.loggedState]];
-    
-    self.statemachine.initialState = self.unloggedState;
-
-    
+   
   // Transitions
     self.loginTransition = [TKEvent eventWithName:@"loginTransition" transitioningFromStates:@[self.unloggedState] toState:self.loggedState];
     self.logoutTransition = [TKEvent eventWithName:@"logoutTransition" transitioningFromStates:@[self.loggedState] toState:self.unloggedState];
     [self.statemachine addEvents:@[self.loginTransition, self.logoutTransition]];
 
+  // Specific Behaviors
+    block(self.statemachine);
+
+  // Go
+    self.statemachine.initialState = self.unloggedState;
     [self.statemachine activate];
 }
 
