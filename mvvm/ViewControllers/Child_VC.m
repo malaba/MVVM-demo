@@ -39,11 +39,13 @@
 
 #pragma mark - Actions
 - (IBAction)flip:(id)sender {
-    if (self.viewmodel.statemachine.currentState == self.viewmodel.offState) {
-        [self.viewmodel.statemachine fireEvent:self.viewmodel.powerOnTransition userInfo:nil error:nil];
+    Child_VM *vm = self.viewmodel;
+    
+    if (vm.statemachine.currentState == vm.offState) {
+        [vm.statemachine fireEvent:vm.powerOnTransition userInfo:nil error:nil];
     }
     else {
-        [self.viewmodel.statemachine fireEvent:self.viewmodel.powerOffTransition userInfo:nil error:nil];
+        [vm.statemachine fireEvent:vm.powerOffTransition userInfo:nil error:nil];
     }
 }
 
